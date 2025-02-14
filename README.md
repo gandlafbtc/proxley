@@ -4,6 +4,8 @@ A proxy that allows Cashu mints and wallets to talk to each other over nostr. Th
 
 This will also create a kind `11111` transport announcement event defined by [NIP-37](https://github.com/nostr-protocol/nips/blob/459e5aaead3e1d4803d2f7798d2c7ab784cfab14/137.md) (open PR). With this, a mint can be identified simply by a pubkey.
 
+see [demo wallet](https://github.com/gudnuf/cashu-proxy-tester) that talks to mints using the below protocol defined as NIP-XX
+
 This projects is an example of the following idea:
 
 ### NIP-XX
@@ -49,6 +51,8 @@ Also, mints might want to use the same pubkey advertised in their info endpoint.
 
 ## Usage
 
+Proxy for any mint by setting `MINT_URL` to the mint you want to proxy for.
+
 Install:
 
 ```bash
@@ -58,15 +62,16 @@ npm install
 Use one of the following scripts to start a proxy with a specified environment file.
 
 ```bash
-npm run start
-```
-
-```bash
 npm run start:instance1
 ```
 
 ```bash
 npm run start:instance2
+```
+
+Or create your own .env and
+```bash
+npm run start
 ```
 
 
