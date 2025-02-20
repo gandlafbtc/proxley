@@ -56,22 +56,15 @@ Proxy for any mint by setting `SERVICE_URL` to the mint you want to proxy for.
 Install:
 
 ```bash
-npm install
+bun install
 ```
 
 Use one of the following scripts to start a proxy with a specified environment file.
 
 ```bash
-npm run start:instance1
+npm run dev
 ```
 
 ```bash
-npm run start:instance2
+bun run src/index.ts --env-file=.env.instance1
 ```
-
-Or create your own .env and
-```bash
-npm run start
-```
-
-
