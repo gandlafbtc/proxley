@@ -1,10 +1,18 @@
-import debug from "debug";
+import { ansiColorFormatter, configure, getConsoleSink, getFileSink, getLogger, getRotatingFileSink } from "@logtape/logtape";
 
-if (!process.env.DEBUG) debug.enable("proxy, proxy:*");
+export const setUpLogger = async () => {
+    await configure({
+        sinks: { 
+            console: getConsoleSink({formatter: ansiColorFormatter}),
+            file: getRotatingFileSink("data/app.log", {
+                maxSize: 0x400 * 0x400 * 5,
+                maxFiles: 5
+            }),
+        },
+        loggers: [
+            { category: "proxley", lowestLevel: "debug", sinks: ["console", "file"] },
+        ],
+    });
+}
 
-const logger = debug("proxy");
-const errorLogger = debug("proxy:error");
-
-export { logger, errorLogger };
-
-export default logger;
+export const log = getLogger(["proxley"]);

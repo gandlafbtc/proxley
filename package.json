@@ -1,35 +1,25 @@
 {
-  "name": "cashu-proxy",
+  "name": "proxley",
   "version": "0.0.0",
-  "main": "build/index.js",
-  "type": "module",
+  "module": "src/index.js",
   "scripts": {
-    "start": "node build/index.js",
-    "start:instance1": "env-cmd -f .env.instance1 node build/index.js",
-    "start:instance2": "env-cmd -f .env.instance2 node build/index.js",
-    "build": "tsc",
-    "dev": "nodemon -i '**/data/**' --exec 'node' --loader @swc-node/register/esm src/index.ts",
+    "start": "bun run src/index.ts",
+    "dev": "bun run src/index.ts --watch",
     "format": "prettier -w ."
   },
-  "author": "gudnuf",
+  "author": "gudnuf, gandlaf",
   "license": "MIT",
-  "description": "",
+  "description": "Nostr client, proxying webservice requests",
   "dependencies": {
+    "@logtape/logtape": "^0.8.2",
     "@nostr-dev-kit/ndk": "^2.10.5",
-    "@swc-node/register": "^1.10.9",
-    "@swc/core": "^1.8.0",
-    "@swc/types": "^0.1.14",
-    "@types/debug": "^4.1.12",
-    "debug": "^4.3.7",
-    "dotenv": "^16.4.5",
-    "nostr-tools": "^2.10.1",
-    "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "nostr-tools": "^2.10.1"
   },
   "devDependencies": {
-    "@types/node": "^22.9.0",
-    "env-cmd": "^10.1.0",
-    "nodemon": "^3.1.7"
-  }
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module"
 }

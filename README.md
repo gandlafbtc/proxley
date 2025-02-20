@@ -51,7 +51,7 @@ Also, mints might want to use the same pubkey advertised in their info endpoint.
 
 ## Usage
 
-Proxy for any mint by setting `MINT_URL` to the mint you want to proxy for.
+Proxy for any mint by setting `SERVICE_URL` to the mint you want to proxy for.
 
 Install:
 
