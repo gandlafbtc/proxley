@@ -1,12 +1,9 @@
-# cashu ❤️ nostr
+# Proxley - A nostr proxy for http webservices
 
-A proxy that allows Cashu mints and wallets to talk to each other over nostr. They just need pubkeys!
+Based on [https://github.com/gudnuf/cashu-proxy](https://github.com/gudnuf/cashu-proxy)
 
-This will also create a kind `11111` transport announcement event defined by [NIP-37](https://github.com/nostr-protocol/nips/blob/459e5aaead3e1d4803d2f7798d2c7ab784cfab14/137.md) (open PR). With this, a mint can be identified simply by a pubkey.
 
-see [demo wallet](https://github.com/gudnuf/cashu-proxy-tester) that talks to mints using the below protocol defined as NIP-XX
-
-This projects is an example of the following idea:
+![logo](logo.svg)
 
 ### NIP-XX
 

@@ -21,7 +21,6 @@ setUpLogger().then(()=> {
   .catch((e) => {
     log.error("Failed to connect to relays", e);
   });
-  
 }
 )
 async function main() {
