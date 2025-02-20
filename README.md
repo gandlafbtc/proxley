@@ -2,8 +2,9 @@
 
 Based on [https://github.com/gudnuf/cashu-proxy](https://github.com/gudnuf/cashu-proxy)
 
-
 ![logo](logo.svg)
+
+Proxley is a proxy service that can run alongside another rest service and listen for requests sent through nostr, and pass them on to the appropriate endpoint. Currently, http headers are not passed through.
 
 ### NIP-XX
 
